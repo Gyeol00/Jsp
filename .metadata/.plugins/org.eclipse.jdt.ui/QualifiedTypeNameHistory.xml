@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="jakarta.servlet.jsp.JspWriter"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.connector.Response"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.Filter"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebFilter"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletContextListener"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="jakarta.security.auth.message.callback.PrivateKeyCallback.Request"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSessionAttributeListener"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebListener"/>
 </qualifiedTypeNameHistroy>

@@ -14,8 +14,7 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
---><!-- The contents of this file will be loaded for each web application -->
-<Context>
+--><!-- The contents of this file will be loaded for each web application --><Context>
 
     <!-- Default set of monitored resources. If one of these changes, the    -->
     <!-- web application will be reloaded.                                   -->
@@ -27,17 +26,4 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
-    
-    <Resource
-    	name="jdbc/studydb"
-    	auth="Container"
-    	type="javax.sql.DataSource"
-    	driverClassName="com.mysql.cj.jdbc.Driver"
-    	url="jdbc:mysql://127.0.0.1:3306/studydb"
-    	username="root"
-    	password="1234"
-    	maxTotal="13"
-    	maxIdle="13"
-    	maxWaitMillis="3000"
-    	/>
 </Context>

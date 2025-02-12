@@ -14,13 +14,13 @@
   <context-param>
   	<description>환경정보 PARAM1</description>
   	<param-name>PARAM1</param-name>
-  	<param-value>1</param-value>
+  	<param-value>1</param-value>  
   </context-param>
   
   <context-param>
   	<description>환경정보 PARAM2</description>
   	<param-name>PARAM2</param-name>
-  	<param-value>2</param-value>
+  	<param-value>2</param-value>  
   </context-param>
   
   <!-- 에러페이지 설정 -->
@@ -28,10 +28,21 @@
   	<error-code>404</error-code>
   	<location>/error/404.jsp</location>
   </error-page>
-
+  
   <error-page>
   	<error-code>500</error-code>
   	<location>/error/500.jsp</location>
   </error-page>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 </web-app>
