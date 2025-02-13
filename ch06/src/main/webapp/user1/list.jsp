@@ -28,8 +28,7 @@
 		// JNDI 서비스 객체 생성
 		Context initCtx = new InitialContext();
 		Context ctx = (Context) initCtx.lookup("java:comp/env"); // JNDI 기본 환경명
-		
-		
+			
 		// 커넥션 풀에 있는 커넥션을 가져오기
 		DataSource ds = (DataSource) ctx.lookup("jdbc/studydb");
 		Connection conn = ds.getConnection();
