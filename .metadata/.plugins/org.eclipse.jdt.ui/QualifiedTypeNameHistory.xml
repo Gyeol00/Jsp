@@ -10,9 +10,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSessionAttributeListener"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebListener"/>
     <fullyQualifiedTypeName name="jakarta.security.auth.message.callback.PrivateKeyCallback.Request"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="dao.User1DAO"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
@@ -22,10 +19,22 @@
     <fullyQualifiedTypeName name="javax.naming.Context"/>
     <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="util.DBHelper"/>
-    <fullyQualifiedTypeName name="util.SQL"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="service.User1Service"/>
     <fullyQualifiedTypeName name="dto.User1DTO"/>
+    <fullyQualifiedTypeName name="service.User2Service"/>
+    <fullyQualifiedTypeName name="dao.User2DAO"/>
+    <fullyQualifiedTypeName name="dto.User2DTO"/>
+    <fullyQualifiedTypeName name="util.DBHelper"/>
+    <fullyQualifiedTypeName name="util.SQL"/>
+    <fullyQualifiedTypeName name="dao.CustomerDAO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="service.CustomerService"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="dto.CustomerDTO"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.slf4j.ILoggerFactory"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 </qualifiedTypeNameHistroy>

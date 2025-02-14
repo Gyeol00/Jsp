@@ -13,5 +13,6 @@ public class SQL {
 		
 	public static final String DELETE_USER1 = "delete from `user1` where `uid`=?";
 
-
+	// user2
+	public static final String INSERT_USER2 = "insert into `user2` values (?,?,?,?)";
 }
