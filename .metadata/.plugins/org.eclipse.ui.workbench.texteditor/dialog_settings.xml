@@ -15,9 +15,11 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="true"/>
 		<list key="replacehistory">
+			<item value="/jboard/images"/>
 			<item value="th"/>
 		</list>
 		<list key="findhistory">
+			<item value="../images"/>
 			<item value="td"/>
 		</list>
 	</section>
