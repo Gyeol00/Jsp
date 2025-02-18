@@ -6,8 +6,7 @@ import kr.co.jboard.dao.UserDAO;
 import kr.co.jboard.dto.UserDTO;
 
 public enum UserService {
-	
-	INSTANCE;	
+	INSTANCE;
 	private UserDAO dao = UserDAO.getInstance();
 	
 	public void registeUser(UserDTO dto) {
@@ -16,6 +15,10 @@ public enum UserService {
 	
 	public UserDTO findUser(String uid) {
 		return dao.selectUser(uid);
+	}
+	
+	public UserDTO findUser(UserDTO dto) {
+		return dao.selectUser(dto);
 	}
 	
 	public List<UserDTO> findAllUser() {

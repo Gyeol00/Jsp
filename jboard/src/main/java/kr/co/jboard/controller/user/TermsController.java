@@ -13,14 +13,13 @@ import kr.co.jboard.service.TermsService;
 
 @WebServlet("/user/terms.do")
 public class TermsController extends HttpServlet {
-
-	private static final long serialVersionUID = 1L;
-
+	private static final long serialVersionUID = 1270462712653325736L;
+	
 	private TermsService service = TermsService.INSTANCE;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		// 약관 조회
 		TermsDTO dto = service.findTerms(1);
 		
@@ -28,12 +27,11 @@ public class TermsController extends HttpServlet {
 		req.setAttribute("dto", dto);
 		
 		// View forward
-		RequestDispatcher dispatcher =  req.getRequestDispatcher("/WEB-INF/user/terms.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/user/terms.jsp");
 		dispatcher.forward(req, resp);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
 	}
 }
