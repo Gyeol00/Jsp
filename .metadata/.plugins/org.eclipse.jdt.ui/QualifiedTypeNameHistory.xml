@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.Filter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebFilter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletContextListener"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSessionAttributeListener"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebListener"/>
     <fullyQualifiedTypeName name="jakarta.security.auth.message.callback.PrivateKeyCallback.Request"/>
@@ -33,8 +32,6 @@
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="org.slf4j.ILoggerFactory"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dao.FileDAO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.FileDTO"/>
@@ -42,7 +39,6 @@
     <fullyQualifiedTypeName name="kr.co.jboard.util.DBHelper"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dao.UserDAO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.ArticleDTO"/>
-    <fullyQualifiedTypeName name="kr.co.jboard.dto.UserDTO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dao.CommentDAO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.CommentDTO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -50,4 +46,9 @@
     <fullyQualifiedTypeName name="kr.co.jboard.dao.TermsDAO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.TermsDTO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.util.SQL"/>
+    <fullyQualifiedTypeName name="kr.co.jboard.service.UserService"/>
+    <fullyQualifiedTypeName name="kr.co.jboard.dto.UserDTO"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>

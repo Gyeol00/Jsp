@@ -15,10 +15,16 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="true"/>
 		<list key="replacehistory">
+			<item value="＼&quot;"/>
+			<item value="&quot;"/>
 			<item value="/jboard/images"/>
 			<item value="th"/>
 		</list>
 		<list key="findhistory">
+			<item value="&quot;"/>
+			<item value="&apos;"/>
+			<item value="addr"/>
+			<item value="zone"/>
 			<item value="../images"/>
 			<item value="td"/>
 		</list>
