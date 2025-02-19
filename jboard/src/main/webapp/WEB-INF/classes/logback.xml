@@ -23,6 +23,6 @@
 
   <!-- debug 레벨은 불필요한 정보까지 모두 로그하기 때문에 실무에서는 보통 info 레벨부터 사용한다 -->
   <root level="debug">
-    <appender-ref ref="FILE" />
+    <appender-ref ref="STDOUT" />
   </root>
 </configuration>

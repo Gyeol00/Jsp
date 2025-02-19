@@ -21,6 +21,8 @@
 			<item value="th"/>
 		</list>
 		<list key="findhistory">
+			<item value="btnAuthCon"/>
+			<item value="btnAuth"/>
 			<item value="&quot;"/>
 			<item value="&apos;"/>
 			<item value="addr"/>

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jakarta.servlet.jsp.JspWriter"/>
-    <fullyQualifiedTypeName name="org.apache.catalina.connector.Response"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.Filter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebFilter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletContextListener"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSessionAttributeListener"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebListener"/>
     <fullyQualifiedTypeName name="jakarta.security.auth.message.callback.PrivateKeyCallback.Request"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="dao.User1DAO"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
@@ -29,9 +24,7 @@
     <fullyQualifiedTypeName name="dao.CustomerDAO"/>
     <fullyQualifiedTypeName name="service.CustomerService"/>
     <fullyQualifiedTypeName name="dto.CustomerDTO"/>
-    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="org.slf4j.ILoggerFactory"/>
-    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dao.FileDAO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.FileDTO"/>
@@ -46,9 +39,25 @@
     <fullyQualifiedTypeName name="kr.co.jboard.dao.TermsDAO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.TermsDTO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.util.SQL"/>
-    <fullyQualifiedTypeName name="kr.co.jboard.service.UserService"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.UserDTO"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="kr.co.jboard.service.UserService"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="javax.mail.Session"/>
+    <fullyQualifiedTypeName name="javax.mail.Authenticator"/>
+    <fullyQualifiedTypeName name="javax.mail.PasswordAuthentication"/>
+    <fullyQualifiedTypeName name="javax.mail.Message"/>
+    <fullyQualifiedTypeName name="javax.mail.internet.MimeMessage"/>
+    <fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
+    <fullyQualifiedTypeName name="javax.mail.Transport"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
