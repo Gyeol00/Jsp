@@ -10,8 +10,8 @@ public enum ArticleService {
 	INSTANCE;	
 	private ArticleDAO dao = ArticleDAO.getInstance();
 	
-	public void registeArticle(ArticleDTO dto) {
-		dao.insertArticle(dto);
+	public int registerArticle(ArticleDTO dto) {
+		return dao.insertArticle(dto);
 	}
 	
 	public ArticleDTO findArticle(int no) {

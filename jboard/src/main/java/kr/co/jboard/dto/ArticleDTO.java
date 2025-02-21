@@ -1,6 +1,7 @@
 package kr.co.jboard.dto;
 
 public class ArticleDTO {
+	
 	private int no;
 	private String cate;
 	private String title;
@@ -35,6 +36,7 @@ public class ArticleDTO {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	
 	public int getComment() {
 		return comment;
 	}
@@ -71,11 +73,15 @@ public class ArticleDTO {
 	public void setWdate(String wdate) {
 		this.wdate = wdate;
 	}
+	
 	@Override
 	public String toString() {
-		return "ArticleDTO [no=" + no + ", cate=" + cate + ", title=" + title + ", content=" + content + ", comment="
-				+ comment + ", file=" + file + ", hit=" + hit + ", writer=" + writer + ", regip=" + regip + ", wdate="
-				+ wdate + "]";
+		return "ArticleDTO [no=" + no + ", cate=" + cate + ", title=" + title + ", content=" + content + ", file="
+				+ file + ", hit=" + hit + ", writer=" + writer + ", regip=" + regip + ", wdate=" + wdate + "]";
 	}
+	
+	
+	
+	
 	
 }
