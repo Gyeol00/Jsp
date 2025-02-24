@@ -8,4 +8,10 @@
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.UserDTO"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="kr.co.jboard.service.ArticleService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="kr.co.jboard.dto.ArticleDTO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="kr.co.jboard.dto.PageGroupDTO"/>
 </qualifiedTypeNameHistroy>

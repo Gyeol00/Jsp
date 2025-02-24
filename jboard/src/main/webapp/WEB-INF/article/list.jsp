@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%><!DOCTYPE html>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,24 +26,31 @@
                         <th>글쓴이</th>
                         <th>날짜</th>
                         <th>조회</th>
-                    </tr>                    
-                    <tr>
-                        <td>1</td>
-                        <td><a href="./view.html">테스트 제목입니다.[3]</a></td>
-                        <td>길동이</td>
-                        <td>20-05-12</td>
-                        <td>12</td>
-                    </tr>
+                    </tr>    
+                    <c:forEach var="article" items="${requestScope.articles}">
+	                    <tr>
+	                    	<!-- 1씩 차감되게 해보기 -->
+	                        <td>${pageStartNum}</td>
+	                        <td><a href="/jboard/article/view.do">${article.title}[${article.comment}]</a></td>
+	                        <td>${article.writer}</td>
+	                        <td>${article.nick}</td>
+	                        <td>${article.wdate}</td>
+	                        <td>${article.hit}</td>
+	                    </tr>
+                    </c:forEach>
                 </table>
 
                 <div class="page">
-                    <a href="#" class="prev">이전</a>
-                    <a href="#" class="num current">1</a>
-                    <a href="#" class="num">2</a>
-                    <a href="#" class="num">3</a>
-                    <a href="#" class="next">다음</a>
+                	<c:if test="${pageGroupDTO.start > 1}">
+                    	<a href="/jboard/article/list.do?pg=${pageGroupDTO.start - 1}" class="prev">이전</a>
+                    </c:if>
+                    <c:forEach var="num" begin="${pageGroupDTO.start}" end="${pageGroupDTO.end}">
+                    	<a href="/jboard/article/list.do?pg=${num}" class="num ${currentPage == num ? 'current':''}">${num}</a>
+                    </c:forEach>
+                    <c:if test="${pageGroupDTO.end < lastPageNum}">
+                    	<a href="/jboard/article/list.do?pg=${pageGroupDTO.end + 1}" class="next">다음</a>
+                    </c:if>
                 </div>
-
                 <a href="/jboard/article/write.do" class="btn btnWrite">글쓰기</a>
                 
             </section>
