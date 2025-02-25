@@ -401,7 +401,7 @@ footer > p > .version {
     float: right;
 }
 
-#article > .list > nav > form > input[name=search]{
+#article > .list > nav > form > input[name=keyword]{
     width: 200px;
     height: 26px;
     text-indent: 6px;

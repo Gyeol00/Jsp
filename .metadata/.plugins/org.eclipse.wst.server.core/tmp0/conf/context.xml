@@ -67,4 +67,17 @@
     	maxWaitMillis="3000"
     	/>
     	
+    	<Resource
+    	name="jdbc/farmStory"
+    	auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="com.mysql.cj.jdbc.Driver"
+    	url="jdbc:mysql://127.0.0.1:3306/farmStory"
+    	username="farmStory"
+    	password="1q2w3e"
+    	maxTotal="13"
+    	maxIdle="13"
+    	maxWaitMillis="3000"
+    	/>
+    	
 </Context>

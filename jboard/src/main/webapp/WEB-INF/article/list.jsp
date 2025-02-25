@@ -13,8 +13,13 @@
             <section class="list">
                 <nav>
                     <h1>글목록</h1>
-                    <form action="#">
-                        <input type="text" name="search" placeholder="제목 키워드, 글쓴이 검색">
+                    <form action="/jboard/article/search.do">
+                    	<select name="searchType" style="padding: 6px;">
+                    		<option value="title">제목</option>
+                    		<option value="content">내용</option>
+                    		<option value="writer">글쓴이</option>
+                    	</select>
+                        <input type="text" name="keyword" placeholder="검색 키워드 입력">
                         <input type="submit" value="검색">
                     </form>
                 </nav>
