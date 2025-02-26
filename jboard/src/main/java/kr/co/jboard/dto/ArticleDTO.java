@@ -1,5 +1,7 @@
 package kr.co.jboard.dto;
 
+import java.util.List;
+
 public class ArticleDTO {
 	
 	private int no;
@@ -19,6 +21,17 @@ public class ArticleDTO {
 	// selectAllArticleBySearch 추가 필드
 	private String searchType;
 	private String keyword;
+	// fileDTO에 선언되어 있기 때문에 FileDTO 하나만 선언
+	// DAO에서 리스트로 선언해서 리스트로
+	private List<FileDTO> files;
+	
+	public List<FileDTO> getFiles() {
+		return files;
+	}
+	
+	public void setFiles(List<FileDTO> files) {
+		this.files = files;
+	}
 	
 	public String getSearchType() {
 		return searchType;

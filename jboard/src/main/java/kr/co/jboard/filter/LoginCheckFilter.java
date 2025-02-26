@@ -51,7 +51,7 @@ public class LoginCheckFilter implements Filter {
 		logger.debug("LoginCheckFilter...4" + path);
 
 		// 로그아웃이 포함이 안되어 있어야 함
-		if(path.startsWith("/user") && !path.contains("logout.do")) {
+		if(path.startsWith("/user") && !path.contains("logout.do") && !path.contains("info.do")) {
 			// 로그인 한 상태에서 /user/* 요청일 때
 			if(userDTO != null) {
 				// 로그인을 안했을 경우 로그인 페이지로 이동

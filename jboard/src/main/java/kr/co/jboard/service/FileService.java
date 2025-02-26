@@ -1,13 +1,21 @@
 package kr.co.jboard.service;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 import kr.co.jboard.dao.FileDAO;
 import kr.co.jboard.dto.FileDTO;
@@ -16,12 +24,13 @@ public enum FileService {
 	
 	INSTANCE;	
 	private FileDAO dao = FileDAO.getInstance();
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	public void registerFile(FileDTO dto) {
 		dao.insertFile(dto);
 	}
 	
-	public FileDTO findFile(int fno) {
+	public FileDTO findFile(String fno) {
 		return dao.selectFile(fno);
 	}
 	
@@ -35,6 +44,10 @@ public enum FileService {
 	
 	public void deleteFile(int fno) {
 		dao.deleteFile(fno);
+	}
+	
+	public void downloadCountUp(String fno) {
+		dao.updateFileDownloadCount(fno);
 	}
 	
 	// 파일 업로드
@@ -65,6 +78,7 @@ public enum FileService {
 			for(Part part : parts) {
 				// 파일명 추출
 				String oName = part.getSubmittedFileName();
+				logger.debug(oName);
 				
 				// 파일을 첨부했으면
 				// oName이 null일 때 오류가 나서 if문 정의
@@ -96,8 +110,37 @@ public enum FileService {
 	}
 	
 	// 파일 다운로드
-	
-	
+		public void downloadFile(HttpServletRequest req, HttpServletResponse resp) {
+			
+			// 공유 참조된 파일 정보 객체 가져오기
+			FileDTO fileDTO = (FileDTO) req.getAttribute("fileDTO");
+			
+			ServletContext ctx = req.getServletContext();
+			String path = ctx.getRealPath("/uploads");
+			File target = new File(path + File.separator + fileDTO.getsName()); // 경로 + 구분자 + 파일명
+
+			try {
+				// response 파일 다운로드 헤더 정보
+				resp.setContentType("application/octet-stream");
+				resp.setHeader("Content-Disposition", "attachment; filename="+URLEncoder.encode(fileDTO.getoName(), "utf-8"));
+				resp.setHeader("Content-Transfer-Encoding", "binary");
+				resp.setHeader("Pragma", "no-cache");
+				resp.setHeader("Cache-Control", "private");
+				
+				BufferedInputStream bis = new BufferedInputStream(new FileInputStream(target));
+				BufferedOutputStream bos = new BufferedOutputStream(resp.getOutputStream());
+				
+				// 파일 전송
+				bis.transferTo(bos);
+				
+				bos.flush();
+				bos.close();
+				bis.close();		
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+ 	
 }
 
 

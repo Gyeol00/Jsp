@@ -1,14 +1,20 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%><!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>글목록</title>
     <link rel="stylesheet" href="/jboard/css/style.css"/>
+    <!-- 
+    	샘플 데이터 채우기
+    	INSERT INTO `article` (`title`, `content`, `writer`, `regip`, `wdate`) 
+		SELECT `title`, `content`, `writer`, `regip`, `wdate` FROM `article`;
+    -->
 </head>
 <body>
     <div id="wrapper">
-    	<%@ include file="./_header.jsp" %>
+        <%@ include file="./_header.jsp" %>
         <main id="article">
             <section class="list">
                 <nav>
@@ -31,20 +37,19 @@
                         <th>글쓴이</th>
                         <th>날짜</th>
                         <th>조회</th>
-                    </tr>    
+                    </tr>
                     <c:forEach var="article" items="${requestScope.articles}">
 	                    <tr>
-	                    	<!-- 1씩 차감되게 해보기 -->
 	                        <td>${pageStartNum}</td>
-	                        <td><a href="/jboard/article/view.do">${article.title}[${article.comment}]</a></td>
-	                        <td>${article.writer}</td>
+	                        <td><a href="/jboard/article/view.do?no=${article.no}">${article.title}[${article.comment}]</a></td>
 	                        <td>${article.nick}</td>
 	                        <td>${article.wdate}</td>
 	                        <td>${article.hit}</td>
 	                    </tr>
+	                    <!-- 목록 카운트 1씩 줄어들게 -->
+	                    <c:set var="pageStartNum" value="${pageStartNum - 1}" />
                     </c:forEach>
                 </table>
-
                 <div class="page">
                 	<c:if test="${pageGroupDTO.start > 1}">
                     	<a href="/jboard/article/list.do?pg=${pageGroupDTO.start - 1}" class="prev">이전</a>
@@ -56,8 +61,7 @@
                     	<a href="/jboard/article/list.do?pg=${pageGroupDTO.end + 1}" class="next">다음</a>
                     </c:if>
                 </div>
-                <a href="/jboard/article/write.do" class="btn btnWrite">글쓰기</a>
-                
+               	<a href="/jboard/article/write.do" class="btn btnWrite">글쓰기</a>                
             </section>
         </main>
         <%@ include file="./_footer.jsp" %>
