@@ -12,7 +12,7 @@
 </head>
 <%@ include file="../layout/_header.jsp" %>
 <script>
-	// 문서 로드 이후 실행	
+	// 문서 로드 이후 실행
 	document.addEventListener('DOMContentLoaded', function(){
 		
 		const btnNext = document.getElementsByClassName('btnNext')[0];

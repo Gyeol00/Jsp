@@ -25,7 +25,9 @@ public class TermsDAO extends DBHelper {
 			conn = getConnection();
 			psmt = conn.prepareStatement(SQL.SELECT_TERMS);
 			psmt.setInt(1, no);
+			
 			rs = psmt.executeQuery();
+			
 			if(rs.next()) {
 				dto = new TermsDTO();
 				dto.setNo(rs.getInt(1));
@@ -33,11 +35,15 @@ public class TermsDAO extends DBHelper {
 				dto.setPrivacy(rs.getString(3));
 			}
 			closeAll();
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		return dto;
 	}
+		
+		
 	
 	public List<TermsDTO> selectAllTerms() {
 		return null;
