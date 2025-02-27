@@ -20,11 +20,11 @@ import kr.co.jboard.service.FileService;
 @WebServlet("/article/write.do")
 public class WriteController extends HttpServlet {
 	private static final long serialVersionUID = 1222232765653325736L;
-	
+
 	private ArticleService service = ArticleService.INSTANCE;
 	private FileService fileService = FileService.INSTANCE;
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -32,20 +32,20 @@ public class WriteController extends HttpServlet {
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/article/write.jsp");
 		dispatcher.forward(req, resp);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
+
 		// 데이터 수신
 		// name 값이 3개지만 file은 2차 개발로 즉 2개임
 		String title = req.getParameter("title");	
 		String content = req.getParameter("content");
 		String writer = req.getParameter("writer");
 		String regip = req.getRemoteAddr();
-		
+
 		// 파일 업로드 서비스 호출
 		List<FileDTO> files = fileService.uploadFile(req);
-		
+
 		// DTO 생성
 		ArticleDTO dto = new ArticleDTO();
 		dto.setTitle(title);
@@ -53,22 +53,21 @@ public class WriteController extends HttpServlet {
 		dto.setFile(files.size());
 		dto.setWriter(writer);
 		dto.setRegip(regip);
-		
 		logger.debug(dto.toString());
-		
-		// 글등록 서비스 호출
+
+		// 글 등록 서비스 호출
 		int no = service.registerArticle(dto);
-		
+
 		// 파일 등록 서비스 호출
 		for(FileDTO fileDTO : files) {
 			fileDTO.setAno(no);
 			fileService.registerFile(fileDTO);
 		}
-		
+
 		// 글목록 이동
 		resp.sendRedirect("/jboard/article/list.do");
-		
-		
-		
+
+
+
 	}
 }

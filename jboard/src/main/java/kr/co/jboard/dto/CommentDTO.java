@@ -7,6 +7,18 @@ public class CommentDTO {
 	private String writer;
 	private String regip;
 	private String wdate;
+	
+	// 추가 필드
+	private String nick;
+	
+	public String getNick() {
+		return nick;
+	}
+	
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
+	
 	public int getCno() {
 		return cno;
 	}
@@ -18,6 +30,11 @@ public class CommentDTO {
 	}
 	public void setParent(int parent) {
 		this.parent = parent;
+	}
+	public void setParent(String parent) {
+		if(parent != null) {
+			this.parent = Integer.parseInt(parent);
+		}
 	}
 	public String getContent() {
 		return content;
