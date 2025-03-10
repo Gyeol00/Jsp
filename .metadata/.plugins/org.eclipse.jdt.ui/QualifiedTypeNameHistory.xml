@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.UserDTO"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.PageGroupDTO"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="kr.co.jboard.service.ArticleService"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.ArticleDTO"/>
@@ -28,8 +27,6 @@
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="util.DBHelper"/>
     <fullyQualifiedTypeName name="dao.UserDAO"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="kr.co.jboard.util.SQL"/>
     <fullyQualifiedTypeName name="javax.xml.stream.events.Comment"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -41,9 +38,26 @@
     <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="kr.co.jboard.dto.CommentDTO"/>
-    <fullyQualifiedTypeName name="ch.qos.logback.classic.Logger"/>
     <fullyQualifiedTypeName name="java.lang.System.Logger"/>
-    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
-    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="kr.co.pamStory.dto.TermsDTO"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.core.recovery.ResilientSyslogOutputStream"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.util.SQL"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.classic.Logger"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.service.passwordService"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.service.PassWordService"/>
+    <fullyQualifiedTypeName name="java.io.Console"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.util.DBHelper"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="java.security.Provider.Service"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.dao.UserDAO"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.dto.UserDTO"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.dto.InfoDTO"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.dao.InfoDAO"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.service.UserService"/>
+    <fullyQualifiedTypeName name="kr.co.pamStory.service.InfoService"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
 </qualifiedTypeNameHistroy>
