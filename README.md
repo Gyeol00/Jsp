@@ -151,3 +151,85 @@ JSP(JavaServer Pages) 기반으로 데이터베이스와 연동되는 웹 애플
 * 웹 브라우저의 자바스크립트에서 fetch API를 이용해 JSON 데이터를 비동기적으로 요청하고 화면에 동적으로 출력
 * 페이지를 새로 고침하지 않고도 서버와 데이터를 주고받을 수 있는 AJAX 개념 및 활용법 실습
 * JSON과 XML의 데이터 포맷 차이점 및 각각의 활용 사례 체험
+
+---
+  
+## ch07 - JSP 파일 업로드 · 다운로드 · 이메일 전송 실습
+
+JSP(Java Server Pages)를 이용하여 웹 애플리케이션에서 **파일 업로드**, **파일 다운로드**, **이메일 전송** 기능을 구현해보는 실습입니다.
+
+### 파일 업로드
+사용자가 업로드한 파일을 서버에 저장하고, 제목·작성자 정보와 함께 데이터베이스에 기록하는 기능
+
+### 파일 다운로드
+업로드된 파일 목록을 웹 페이지에 출력하고, 각 파일에 대해 다운로드 및 삭제 기능 제공
+
+### 이메일 전송 
+입력한 송신자, 수신자, 제목, 내용을 바탕으로 SMTP를 이용해 이메일을 전송하는 기능
+
+---
+
+## ch08 - JSP 표현언어(EL) & JSTL 실습
+
+JSP(Expression Language)와 JSTL(Java Standard Tag Library)을 활용한 **웹 표현 기술 학습**을 목적으로 구성된 실습입니다.
+
+### 표현언어 (EL: Expression Language)
+
+📌 주요 개념
+* JSP에서 자바 코드를 최소화하고 표현을 단순화하기 위한 문법
+* ${} 구문을 사용하여 객체의 값을 출력함
+* 스코프 객체(page, request, session, application)에 저장된 데이터를 접근 가능
+
+📌 실습 내용 요약
+* pageContext, request, session, application에 데이터를 저장 후 EL로 출력
+* 표현식(<%= %>)과 EL의 차이점 비교
+* EL 연산자 실습 (+, ==, !=, eq, lt, empty 등)
+
+### JSTL (Java Standard Tag Library)
+
+📌 주요 태그
+* <c:set> : 변수 선언
+* <c:if> : 조건문
+* <c:choose>, <c:when>, <c:otherwise> : 다중 조건문
+* <c:forEach> : 반복문
+* f:length, f:substring, f:replace : 문자열 함수
+
+📌 실습 내용 요약
+* 자바 스크립트릿(Scriptlet)과 JSTL의 비교
+* 조건문/반복문/문자열 함수 등 JSTL 문법 학습
+* JSTL을 활용한 깔끔한 JSP 구현
+
+## ch09 - Java Web - Servlet, Filter, Listener 실습
+
+Java Servlet 기반의 웹 어플리케이션 실습 예제로, Servlet, Filter, Listener의 개념과 활용법을 학습하기 위한 실습입니다.
+
+### 📌 주요 기능 요약
+#### Servlet
+/hello.do, /welcome.do, /greeting.do 서블릿 구현
+
+각각 HTML 응답을 반환하며 로그 출력 포함
+
+HelloServlet은 init()과 destroy()를 통해 서블릿 생명주기 학습
+
+#### Filter
+FilterA: 단순 로그 출력
+
+FilterB: 요청 인코딩 처리 (UTF-8)
+
+FilterC: 특정 URL(/welcome.do, /greeting.do)에만 필터링 적용
+
+필터 체인(FilterChain)을 이용한 연속 처리 확인 가능
+
+#### Listener
+MyContextListener: 웹 어플리케이션 시작/종료 감지
+
+SessionListener: 로그인 세션 수 증가/감소 감지
+
+세션 속성 추가/제거를 통한 사용자 수 추적
+
+#### JSP (View)
+1.Servlet.jsp: 서블릿 기본 테스트
+
+2.Filter.jsp: 필터 작동 확인용 링크 제공
+
+3.Listener.jsp: 로그인/로그아웃 기능을 통해 세션 리스너 작동 확인
