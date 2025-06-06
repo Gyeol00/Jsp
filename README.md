@@ -1,22 +1,25 @@
 # Jsp
 
 ### ⚙ 개발 환경
+(★ 표시는 코드에 직접 import 되거나 build-path에 올려두고 쓴 것들)
 
-JDK: Java Development Kit 17
-
-서버: Apache Tomcat 10.1.x
-
-IDE: Eclipse IDE for Enterprise Java Developers
-
-JSP/Servlet 버전: JSP 3.1 / Servlet 6.0
-
-DBMS: MySQL (또는 실습에 따라 다른 RDBMS)
-
-JDBC 드라이버: MySQL Connector/J
-
-웹 기술: HTML, CSS, JavaScript, AJAX(fetch API)
-
-기타: DBCP(DataBase Connection Pool), JavaBeans, JSON
+| 구분            | 세부 항목                                          | 비고                                          |
+| ------------- | ---------------------------------------------- | ------------------------------------------- |
+| **JDK**       | OpenJDK 17 / Oracle JDK 17                     | -source 17, -target 17                      |
+| **서버**        | Apache Tomcat 10.1.x                           | Servlet 6.0 / JSP 3.1 구현체                   |
+| **IDE**       | Eclipse IDE for Enterprise Java Developers     | 2023-xx 버전                                  |
+| **DBMS**      | MySQL 8.x ★                                    | `studydb`, `shop` 스키마 실습                    |
+| **JDBC 드라이버** | MySQL Connector/J 8.x ★                        | `/WEB-INF/lib` 또는 Tomcat `lib` 폴더           |
+| **커넥션풀**      | DBCP (톰캣 기본 ★)                                 | `java:comp/env/jdbc/studydb`, `jdbc/shop`   |
+| **뷰 템플릿**     | JSP 3.1 + EL + JSTL 3.0 ★                      | `jakarta.servlet.jsp.jstl-api`, `jstl-impl` |
+| **프런트엔드**     | HTML5, CSS3, JS (ES6), Fetch API               | 정적 리소스 및 AJAX                               |
+| **로그**        | SLF4J 2.x + Logback 1.4.x ★                    | `logback.xml`로 레벨·패턴 지정                     |
+| **파일 업로드**    | Jakarta Servlet multipart API (Servlet 6.0 내장) | 이전 commons-fileupload 없이 구현                 |
+| **이메일 발송**    | Jakarta Mail ★ (javax.mail → jakarta.mail)     | SMTP 실습                                     |
+| **JSON 처리**   | org.json / 기본 `javax.json` 대신 수동 문자열           | 작은 실습이라 외부 파서 최소화                           |
+| **빌드/의존성**    | Eclipse Classpath 수동 추가 (Maven / Gradle X)     | 학습 목적이므로 pom 미사용                            |
+| **테스트 클라이언트** | 브라우저(Chrome), REST Client 플러그인                 | 쿠키·세션/JSON 확인                               |
+| **버전 관리**     | Git / GitHub                                   | 실습 코드 push·commit                           |
 
 ---
 
