@@ -233,3 +233,32 @@ SessionListener: 로그인 세션 수 증가/감소 감지
 2.Filter.jsp: 필터 작동 확인용 링크 제공
 
 3.Listener.jsp: 로그인/로그아웃 기능을 통해 세션 리스너 작동 확인
+
+## ch10 - Java MVC 아키텍처 실습
+
+Java Servlet 기반의 MVC 아키텍처를 실습하기 위한 간단한 웹 애플리케이션입니다.
+사용자 CRUD 기능을 구현하여, MVC 패턴이 어떻게 동작하는지 이해하고 실습했습니다.
+
+### 📌 주요 기능
+* 사용자(User1) 목록 조회
+* 사용자 등록
+* 사용자 수정
+* 사용자 삭제
+
+### 📌 실습 내용 요약
+* 컨트롤러는 사용자 요청을 받아 알맞은 서비스 메서드를 호출하고, 데이터를 JSP 뷰에 전달합니다.
+* 서비스는 DAO를 호출하여 비즈니스 로직을 처리합니다.
+* DAO는 SQL 쿼리를 사용하여 DB와 직접 통신합니다.
+* DTO는 데이터 전달 객체로, 데이터베이스에서 가져온 데이터를 자바 객체 형태로 캡슐화합니다.
+* DBHelper 클래스는 JNDI를 통해 커넥션 풀에서 DB 연결을 관리하며, 자원 해제를 지원합니다.
+
+### 📌 주요 SQL 쿼리
+* 사용자 등록: INSERT INTO user1 VALUES (?, ?, ?, ?)
+* 사용자 조회: SELECT * FROM user1 WHERE uid = ?
+* 사용자 목록 조회: SELECT * FROM user1
+* 사용자 수정: UPDATE user1 SET name=?, hp=?, age=? WHERE uid=?
+* 사용자 삭제: DELETE FROM user1 WHERE uid=?
+
+## ch11 - JSP/Servlet 기반의 웹 애플리케이션
+
+JSP/Servlet 기반의 웹 애플리케이션에서 "고객 등록 및 목록 조회 기능"을 구현한 실습 예제입니다.
