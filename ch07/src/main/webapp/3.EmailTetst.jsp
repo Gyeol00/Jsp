@@ -6,7 +6,7 @@
 	<title>3.EmailTest</title>
 	<!-- 
 		날짜 : 2025/02/10
-		이름 : 김철학
+		이름 : 한결
 		내용 : JSP Email 전송 실습하기
 	 -->
 </head>
